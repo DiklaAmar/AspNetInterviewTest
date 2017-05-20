@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
 namespace ASPTest.Controllers
@@ -11,13 +7,13 @@ namespace ASPTest.Controllers
     {
         IEvents _eventRep = new EventsRepository();
         /// <summary>
-        /// Return Next Postion
+        /// Return Next Position
         /// </summary>
-        /// <param name="Postion"></param>
+        /// <param name="Position"></param>
         /// <returns></returns>
-        public int Get(int Postion)
+        public int Get(int Position)
         {
-            return _eventRep.Next(Postion);
+            return _eventRep.Next(Position);
         }
 
         public List<int> Get()
